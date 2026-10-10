@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="cs">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>SDH Litvínovice – Sbor dobrovolných hasičů</title>
+    <meta name="description" content="SDH Litvínovice – o sboru, jednotce, akcích, kontaktech a informacích pro občany." />
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" />
+  </head>
+  <body data-active-page="{{ active_page | default('o-nas') }}">
+    <div class="page-shell">
+      <header class="top-panel">
+        <img src="{{ url_for('static', filename='images/SDHLogo.svg') }}" alt="Znak SDH" class="top-logo" />
+        <div class="top-title">
+          <div class="top-title--line top-title--sbor">Sbor dobrovolných hasičů</div>
+          <div class="top-title--line top-title--place">Litvínovice</div>
+        </div>
+        <img src="{{ url_for('static', filename='images/JSDHLogo.svg') }}" alt="Znak jednotky JSDH" class="top-logo--right" />
+      </header>
+
+      <nav class="left-panel" aria-label="Hlavní menu">
+        <div class="left-stack" id="main-menu">
+          <button type="button" class="left-box is-nav" data-page="o-nas">O nás</button>
+          <button type="button" class="left-box is-nav" data-page="jednotka">Jednotka</button>
+          <button type="button" class="left-box is-nav" data-page="akce">Akce sboru</button>
+          <button type="button" class="left-box is-nav" data-page="napsali">Napsali o nás</button>
+          <button type="button" class="left-box is-nav" data-page="kontakty">Kontakty</button>
+          <button type="button" class="left-box is-nav" data-page="informace">Informace pro občany</button>
+          <button type="button" class="left-box is-nav" data-page="sponzori">Sponzoři</button>
+          <a class="left-box is-external" href="https://www.zachrankaapp.cz" target="_blank" rel="noopener">Aplikace Záchranka</a>
+          <a class="left-box is-external" href="https://www.pozary.cz" target="_blank" rel="noopener">Požáry.cz</a>
+        </div>
+      </nav>
+
+      <main class="content-panel">
+        <section class="content-card">
+          <div id="page-content" class="page-content" aria-live="polite"></div>
+        </section>
+      </main>
+
+      <aside class="right-panel" aria-label="Postranní panel">
+        <div class="right-stack">
+          <section class="right-box right-box--widget" aria-label="Kalendář akcí">
+            <h2 class="widget-title">📅 Kalendář akcí</h2>
+            <div id="calendar-widget"><p class="muted">Načítání kalendáře…</p></div>
+          </section>
+          <section class="right-box right-box--widget" aria-label="Předpověď počasí Litvínovice">
+            <h2 class="widget-title">🌤️ Počasí Litvínovice</h2>
+            <div id="weather-widget"><p class="muted">Načítání počasí…</p></div>
+          </section>
+          <section class="right-box right-box--widget" aria-label="Vodní stavy">
+            <h2 class="widget-title">🌊 Vodní stavy</h2>
+            <div id="hydro-widget"><p class="muted">Načítání vodních stavů…</p></div>
+          </section>
+          <a class="right-box right-box--link" href="https://www.litvinovice.cz" target="_blank" rel="noopener">OÚ Litvínovice</a>
+          <a class="right-box right-box--link" href="https://www.facebook.com/" target="_blank" rel="noopener">Náš Facebook</a>
+          <a class="right-box right-box--link" href="https://www.hzscr.cz/hzs-jihoceskeho-kraje" target="_blank" rel="noopener">Hasičský záchranný sbor</a>
+        </div>
+      </aside>
+    </div>
+
+    <!-- Center pages: work in progress placeholders -->
+    <template id="tpl-o-nas">
+      <article class="page wip">
+        <p class="kicker">O nás</p>
+        <h1>O nás</h1>
+        <div class="wip-box">🚧 <strong>Work in progress</strong><br />Stránka se připravuje.</div>
+      </article>
+    </template>
+    <template id="tpl-jednotka">
+      <article class="page wip">
+        <p class="kicker">Jednotka</p>
+        <h1>Jednotka</h1>
+        <div class="wip-box">🚧 <strong>Work in progress</strong><br />Stránka se připravuje.</div>
+      </article>
+    </template>
+    <template id="tpl-akce">
+      <article class="page wip">
+        <p class="kicker">Akce sboru</p>
+        <h1>Akce sboru</h1>
+        <div class="wip-box">🚧 <strong>Work in progress</strong><br />Stránka se připravuje.</div>
+      </article>
+    </template>
+    <template id="tpl-napsali">
+      <article class="page wip">
+        <p class="kicker">Napsali o nás</p>
+        <h1>Napsali o nás</h1>
+        <div class="wip-box">🚧 <strong>Work in progress</strong><br />Stránka se připravuje.</div>
+      </article>
+    </template>
+    <template id="tpl-kontakty">
+      <article class="page wip">
+        <p class="kicker">Kontakty</p>
+        <h1>Kontakty</h1>
+        <div class="wip-box">🚧 <strong>Work in progress</strong><br />Stránka se připravuje.</div>
+      </article>
+    </template>
+    <template id="tpl-informace">
+      <article class="page wip">
+        <p class="kicker">Informace pro občany</p>
+        <h1>Informace pro občany</h1>
+        <div class="wip-box">🚧 <strong>Work in progress</strong><br />Stránka se připravuje.</div>
+      </article>
+    </template>
+    <template id="tpl-sponzori">
+      <article class="page wip">
+        <p class="kicker">Sponzoři</p>
+        <h1>Sponzoři</h1>
+        <div class="wip-box">🚧 <strong>Work in progress</strong><br />Stránka se připravuje.</div>
+      </article>
+    </template>
+
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+  </body>
+</html>
